@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: pgm-gateway
+  cloud:
+    config:
+      import:
+        - classpath:/routes/articles.yml
+#    gateway:
+#      routes:
+#        - id: posts-route
+#          uri: ${http://localhost:8081}
+#          predicates:
+#            - Path=/posts/**
+#          filter:
+#            - PrefixPath=/api
+#            - AddResponseHeader=X-Powered-By, HeaderValue( #filter adds response header

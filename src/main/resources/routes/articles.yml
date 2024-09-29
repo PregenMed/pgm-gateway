@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: articles
+          uri: http://${PGM_ARTICLES_URL:localhost}:8888
+          predicates:
+            - Path=/articles/**
+          filters:
+            - StripPrefix=1
